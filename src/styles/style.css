@@ -1,0 +1,433 @@
+:root {
+  --cor-principal: #25baa4;
+  --cor-secundaria: #004e7c;
+  --cor-dark: #191919;
+  --cor-light: #f5f6f7;
+  --cor-apoio: #fbc74d;
+  --cor-btn-transf: #469fd2;
+  --cor-btn-renda: #25baa4;
+  --cor-btn-despesa: #ff5f57;
+  --cor-background-geral: #dcdcdc;
+  --gradiente1: linear-gradient(135deg, #004e7c, #25baa4);
+  --gradiente2: linear-gradient(180deg, #25baa4, #004e7c);
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Sansation", sans-serif !important;
+  background: var(--cor-background-geral) !important;
+}
+
+/* Início do Navbar */
+nav {
+  background: var(--gradiente1);
+  border-radius: 0 0 32px 32px;
+}
+
+.navbar-brand img {
+  height: 6rem !important;
+  width: auto !important;
+}
+
+.navbar .nav-link {
+  color: var(--cor-light) !important;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--cor-secundaria) !important;
+  text-decoration: underline;
+  transform: translateY(-3px);
+}
+
+/* Início do Main */
+main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--cor-background-geral);
+  margin-top: 3rem;
+}
+
+.nova-transacao {
+  background: var(--gradiente2);
+  width: 100%;
+  padding: 3rem 0 1rem 0;
+  border-radius: 32px;
+  white-space: nowrap;
+}
+
+.nova-transacao h2 {
+  color: var(--cor-light);
+  font-weight: 700;
+  text-align: center;
+}
+
+.add-transacao {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  width: 82%;
+}
+
+p {
+  color: var(--cor-dark) !important;
+}
+
+.valor-trans {
+  color: var(--cor-btn-despesa);
+}
+
+.valor-saldo {
+  color: var(--cor-btn-renda);
+  white-space: nowrap;
+}
+
+.add-transacao p {
+  margin-bottom: 5px;
+}
+
+.add-transacao h3 {
+  background: var(--cor-light) !important;
+  padding: 1rem 0 1rem 0;
+  border-radius: 16px;
+  font-weight: 700;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+}
+
+.btn-cadastro-transacao {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+i {
+  margin-right: 10px;
+  color: var(--cor-apoio);
+}
+
+.up-side-down {
+  transform: rotate(180deg);
+}
+
+.btn {
+  font-weight: 700 !important;
+  font-size: 1.2rem !important;
+  color: var(--cor-light) !important;
+  padding: 0.3rem 1rem !important;
+  border: none !important;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-saida {
+  background: var(--cor-btn-despesa) !important;
+  transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+}
+
+.btn-saida:hover {
+  transform: translateY(-3px);
+}
+
+.btn-entrada {
+  background: var(--cor-btn-renda) !important;
+  transition: all 0.2s ease;
+}
+
+.btn-entrada:hover {
+  transform: translateY(-3px);
+}
+
+.btn-trans {
+  background: var(--cor-btn-transf) !important;
+  transition: all 0.2s ease;
+}
+
+.btn-trans:hover {
+  transform: translateY(-3px);
+}
+
+.infos-transacao {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 85%;
+}
+
+.campo {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0;
+  height: 70px;
+  align-items: center;
+}
+
+.tag {
+  background: var(--cor-secundaria);
+  color: var(--cor-light);
+  height: 50px;
+  z-index: 20;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  line-height: 1;
+}
+
+.valor,
+.select-estilo {
+  background: var(--cor-principal);
+  color: var(--cor-light);
+  height: 70px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-left: -70px;
+  width: calc(100% + 70px);
+  border-radius: 16px;
+  padding-right: 1.5rem;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.valor:hover,
+.select-estilo:hover {
+  transform: translateY(-3px);
+}
+
+.valor {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.select-estilo {
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  text-align: end;
+  padding-right: 20px;
+}
+
+.bolinha-select {
+  align-items: end;
+  appearance: none;
+  background: var(--cor-btn-renda);
+  border: none;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--cor-light);
+  cursor: pointer;
+}
+
+.repetindo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mensalidade {
+  margin-left: 0;
+  text-align: right;
+}
+
+.upload-btn {
+  cursor: pointer;
+}
+
+.textarea {
+  width: 100%;
+  height: 200px;
+  margin-top: 5px;
+  padding: 15px;
+  background: #fff;
+  color: var(--cor-dark);
+  text-align: ce;
+  border-radius: 16px;
+  border: none;
+  resize: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.textarea::placeholder {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.input-date {
+  text-align: right;
+}
+
+.input-date::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  margin-left: 5px;
+}
+
+/* table */
+.transacoes-extrato {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.transacao-title {
+  background: var(--gradiente2);
+  padding: 3rem 0 1rem 0;
+  border-radius: 32px;
+  white-space: nowrap;
+}
+
+.transacao-title h2 {
+  color: var(--cor-light);
+  font-weight: 700;
+  text-align: center;
+}
+
+.table {
+  margin-top: 1rem;
+  border-radius: 14px;
+  overflow: hidden;
+  line-height: 1;
+}
+
+thead th {
+  background: var(--cor-principal) !important;
+  border-bottom: none;
+}
+
+td {
+  color: var(--cor-dark) !important;
+}
+
+.parcelado {
+  color: var(--cor-btn-renda) !important;
+  font-size: 1.1rem;
+}
+
+.saidas {
+  color: var(--cor-btn-despesa) !important;
+}
+
+caption {
+  text-align: start !important;
+}
+
+footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: var(--cor-dark);
+}
+
+/* ########## RESPONSIVIDADE ##########  */
+@media screen and (max-width: 768px) {
+  .nova-transacao {
+    width: 95%;
+    border-radius: 16px;
+  }
+
+  .add-transacao,
+  .infos-transacao {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .add-transacao h3 {
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .navbar-brand img {
+    height: 4rem !important;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
+  }
+
+  .transacao-title {
+    border-radius: 16px;
+  }
+
+  .valor-saldo,
+  .valor-trans {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    max-width: 90% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .nova-transacao,
+  .add-transacao,
+  .infos-transacao {
+    display: flex;
+    flex-direction: column;
+    white-space: normal;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .add-transacao h3 {
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand img {
+    height: 3.5rem !important;
+  }
+
+  .tag {
+    height: auto;
+    font-size: 1rem;
+    box-shadow: none;
+    padding: 0.4rem 1rem;
+    z-index: 20;
+    border-radius: 10px;
+  }
+
+  .valor,
+  .select-estilo {
+    height: 70px;
+    font-size: 1.1rem;
+    padding-right: 1rem;
+  }
+
+  .valor-trans,
+  .valor-saldo {
+    font-size: 1.8rem !important;
+  }
+
+  .btn-cadastro-transacao {
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 0.8rem !important;
+  }
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grana Certa</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/styles/style.css" />
+
+    <!-- BootStrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body class="container">
+    
+    <!-- Header / Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg px-4 py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="./src/assets/grana-certa-logo.svg" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link active" aria-current="page" href="#"
+                ><i class="fa-solid fa-circle-plus"></i>Nova transação</a
+              >
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-building-columns"></i>Contas</a
+              >
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-file-invoice-dollar"></i>Extrato</a
+              >
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-arrow-trend-up"></i>Balanço</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="nova-transacao">
+        <h2>Nova transação</h2>
+      </div>
+
+      <section class="btn-cadastro-transacao">
+        <button class="btn btn-saida">
+          <i class="fa-solid fa-hand-holding-dollar up-side-down"></i>Saída
+        </button>
+        <button class="btn btn-entrada">
+          <i class="fa-solid fa-hand-holding-dollar"></i>Entrada
+        </button>
+        <button class="btn btn-trans">
+          <i class="fa-solid fa-money-bill-transfer"></i>Transferência
+        </button>
+      </section>
+
+      <section class="add-transacao">
+        <div>
+          <p>Valor da transação</p>
+          <h3 class="valor-trans">R$ 593,84</h3>
+        </div>
+        <div>
+          <p>Saldo</p>
+          <h3 class="valor-saldo">R$ 5.673,90</h3>
+        </div>
+      </section>
+
+      <section class="infos-transacao">
+        <div class="campo">
+          <label for="categoria" class="tag">Categoria</label>
+          <select id="categoria" class="valor select-estilo">
+            <option value="supermercado">Supermercado</option>
+            <option value="contas">Contas e serviços</option>
+            <option value="alimentacao">Alimentação</option>
+            <option value="lazer">Lazer</option>
+            <option value="transporte">Transporte</option>
+            <option value="compras">Compras</option>
+          </select>
+        </div>
+
+        <!-- Data -->
+        <div class="campo">
+          <label for="data" class="tag">Data</label>
+          <input type="date" id="data" class="valor input-date" />
+        </div>
+
+        <!-- Pago com -->
+        <div class="campo">
+          <label for="pagamento" class="tag">Modo de pagamento</label>
+          <select id="pagamento" class="valor select-estilo">
+            <option value="credito" selected>Cartão de crédito</option>
+            <option value="debito">Débito</option>
+            <option value="pix">PIX</option>
+            <option value="dinheiro">Dinheiro</option>
+          </select>
+        </div>
+
+        <div class="campo" id="campo-parcelas">
+          <label for="parcelas" class="tag"
+            >Número <br />
+            de Parcelas</label
+          >
+          <div class="valor repetindo">
+            <select id="repetindo" class="bolinha-select" aria-label="Número de Parcelas">
+              <option value="1">1x</option>
+              <option value="2">2x</option>
+              <option value="3" selected>3x</option>
+              <option value="4">4x</option>
+              <option value="5">5x</option>
+              <option value="6">6x</option>
+              <option value="7">7x</option>
+              <option value="8">8x</option>
+              <option value="9">9x</option>
+              <option value="10">10x</option>
+              <option value="11">11x</option>
+              <option value="12">12x</option>
+              <option value="13">13x</option>
+              <option value="14">14x</option>
+              <option value="15">15x</option>
+              <option value="16">16x</option>
+              <option value="17">17x</option>
+              <option value="18">18x</option>
+              <option value="19">19x</option>
+              <option value="20">20x</option>
+              <option value="21">21x</option>
+              <option value="22">22x</option>
+              <option value="23">23x</option>
+              <option value="24">24x</option>
+            </select>
+            <label class="mensalidade"></label>
+          </div>
+        </div>
+
+        <!-- Comprovante -->
+        <div class="campo">
+          <label class="tag">Comprovante</label>
+          <label for="comprovante" class="valor upload-btn">Adicionar</label>
+          <input type="file" id="comprovante" hidden />
+        </div>
+
+        <!-- Observação -->
+        <div>
+          <label for="obs" class="tag">Observação</label>
+          <textarea
+            id="obs"
+            class="textarea"
+            placeholder="Digite aqui..."
+          ></textarea>
+        </div>
+      </section>
+
+      <section class="transacoes-extrato">
+        <div class="transacao-title">
+          <h2>Transações</h2>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover align-middle">
+            <caption>
+              Extrato detalhado de todas as transações.
+            </caption>
+            <thead>
+              <tr class="table-dark">
+                <th scope="col">Valor</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Data</th>
+                <th scope="col">Modo de Pagamento</th>
+                <th scope="col">Parcelas</th>
+                <th scope="col">Comprovante</th>
+                <th scope="col">Observação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="saidas fw-bold">R$ 320,50</td>
+                <td>Supermercado</td>
+                <td>25/11/2025</td>
+                <td>Débito</td>
+                <td>Não</td>
+                <td><i class="fa-solid fa-paperclip"></i></td>
+                <td>Compra de doces para a festa do Murilo.</td>
+              </tr>
+              <tr>
+                <td class="saidas fw-bold">R$ 85,90</td>
+                <td>Restaurante</td>
+                <td>23/11/2025</td>
+                <td>PIX</td>
+                <td>Não</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="saidas fw-bold">R$ 450,00</td>
+                <td>Roupas</td>
+                <td>22/11/2025</td>
+                <td>Cartão de Crédito</td>
+                <td class="parcelado">4x</td>
+                <td><i class="fa-solid fa-paperclip"></i></td>
+                <td>Aspirador robô.</td>
+              </tr>
+              <tr>
+                <td class="saidas fw-bold">R$ 75,00</td>
+                <td>Cinema/Lazer</td>
+                <td>19/11/2025</td>
+                <td>Dinheiro</td>
+                <td>Não</td>
+                <td><i class="fa-solid fa-paperclip"></i></td>
+                <td>Filme do Superman.</td>
+              </tr>
+              <tr>
+                <td class="saidas fw-bold">R$ 180,00</td>
+                <td>Transporte</td>
+                <td>18/11/2025</td>
+                <td>Débito</td>
+                <td>Não</td>
+                <td><i class="fa-solid fa-paperclip"></i></td>
+                <td>Uber.</td>
+              </tr>
+              <tr>
+                <td class="saidas fw-bold">R$ 49,99</td>
+                <td>Streaming (Assinatura)</td>
+                <td>16/11/2025</td>
+                <td>Cartão de Crédito</td>
+                <td>Não</td>
+                <td></i></td>
+                <td>Netflix.</td>
+              </tr>
+              <tr>
+                <td class="saidas fw-bold">R$ 12,30</td>
+                <td>Farmácia</td>
+                <td>12/11/2025</td>
+                <td>PIX</td>
+                <td>Não</td>
+                <td><i class="fa-solid fa-paperclip"></i></td>
+                <td>Remédio da pressão.</td>
+              </tr>
+              <tr>
+                <td class="saidas fw-bold">R$ 1.500,00</td>
+                <td>Academia (Anual)</td>
+                <td>10/11/2025</td>
+                <td>Cartão de Crédito</td>
+                <td class="parcelado">12x</td>
+                <td><i class="fa-solid fa-paperclip"></i></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="saidas fw-bold">R$ 165,90</td>
+                <td>Presente</td>
+                <td>9/11/2025</td>
+                <td>Cartão de Crédito</td>
+                <td class="parcelado">2x</td>
+                <td><i class="fa-solid fa-paperclip"></i></td>
+                <td>Presente do Murlo.</td>
+              </tr>
+              <tr>
+                <td class="saidas fw-bold">R$ 115,45</td>
+                <td>Conta de Luz</td>
+                <td>5/11/2025</td>
+                <td>PIX</td>
+                <td>Não</td>
+                <td><i class="fa-solid fa-paperclip"></i></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-5 py-4">
+      <div class="text-center">
+        <p class="text-light">© 2025 Grana Certa. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>
